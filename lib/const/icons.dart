@@ -1,6 +1,7 @@
 class MyIcons {
   String get add => 'add';
   String get addCircle => 'add-circle';
+  String get addItem => 'add-item';
   String get archive => 'archive';
   String get archiveAdd => 'archive-add';
   String get archiveMinus => 'archive-minus';
@@ -11,6 +12,7 @@ class MyIcons {
   String get bank => 'bank';
   String get bill => 'bill';
   String get bitcoin => 'bitcoin';
+  String get book => 'book';
   String get briefcase => 'briefcase';
   String get brush => 'brush';
   String get calendar => 'calendar';
@@ -21,6 +23,7 @@ class MyIcons {
   String get chevronUp => 'chevron-up';
   String get clipboard => 'clipboard';
   String get clock => 'clock';
+  String get closeSquare => 'close-square';
   String get code => 'code-circle';
   String get cup => 'cup';
   String get directNotification => 'direct-notification';
@@ -40,6 +43,8 @@ class MyIcons {
   String get health => 'health';
   String get heart => 'heart';
   String get home => 'home';
+  String get homeAlt => 'home-2';
+  String get infoCircle => 'info-circle';
   String get layer => 'layer';
   String get like => 'like';
   String get location => 'location';
@@ -51,6 +56,7 @@ class MyIcons {
   String get medalStar => 'medal-star';
   String get message => 'message';
   String get minus => 'minus';
+  String get minusCircle => 'minus-circle';
   String get music => 'music';
   String get moreSquare => 'more-square';
   String get notification => 'notification';
@@ -67,6 +73,7 @@ class MyIcons {
   String get settings => 'setting';
   String get shield => 'shield';
   String get tag => 'tag';
+  String get tickCircle => 'tick-circle';
   String get teacher => 'teacher';
   String get ticket => 'ticket';
   String get ticket2 => 'ticket-2';
@@ -74,5 +81,8 @@ class MyIcons {
   String get trash => 'trash';
   String get user => 'user';
   String get verify => 'verify';
+  String get warning => 'warning';
   String get woman => 'woman';
+  String get question => 'question';
+  String get x => 'x';
 }

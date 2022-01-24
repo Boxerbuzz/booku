@@ -55,6 +55,7 @@ class EvIcBtn extends StatelessWidget {
             child: IgnorePointer(child: icon),
             onPressed: onPressed,
             borderRadius: radius,
+
           ),
         );
       },

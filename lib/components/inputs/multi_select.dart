@@ -4,17 +4,19 @@ import 'package:flutter/material.dart';
 class EvMultiSelect extends StatefulWidget {
   const EvMultiSelect({
     this.onChanged,
-    this.noMargin = false,
     this.selected,
     this.options = const [],
     Key? key,
     this.more,
+    this.prefix,
+    required this.label,
   }) : super(key: key);
   final List<String> options;
   final String? selected;
   final ValueChanged<String>? onChanged;
-  final bool noMargin;
   final Widget? more;
+  final Widget? prefix;
+  final String label;
 
   @override
   _EvMultiSelectState createState() => _EvMultiSelectState();
@@ -33,27 +35,48 @@ class _EvMultiSelectState extends State<EvMultiSelect> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(left: widget.noMargin ? 0 : Insets.l),
-      child: Wrap(
-        alignment: WrapAlignment.start,
-        crossAxisAlignment: WrapCrossAlignment.start,
-        runAlignment: WrapAlignment.start,
-        direction: Axis.horizontal,
-        runSpacing: Insets.m,
-        spacing: Insets.m,
-        children: [
-          ..._options.map((option) {
-            if (option == 'More') return widget.more ?? Container();
-            return _BuildOption(
-                option: option,
-                isSelected: _selected == option,
-                callback: () {
-                  AppHelper.unFocus();
-                  _select(option);
-                });
-          }),
-        ],
+    AppTheme theme = context.watch();
+    return EvContainer(
+      color: theme.background,
+      borderRadius: Corners.s10Border,
+      border: Border.all(color: theme.greyStrong),
+      child: Padding(
+        padding: EdgeInsets.all(Insets.m),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                (widget.prefix ?? Container()).padding(right: Insets.sm),
+                Text(
+                  widget.label,
+                  style: TextStyles.body1,
+                ),
+              ],
+            ),
+            VSpace.md,
+            Wrap(
+              alignment: WrapAlignment.start,
+              crossAxisAlignment: WrapCrossAlignment.start,
+              runAlignment: WrapAlignment.start,
+              direction: Axis.horizontal,
+              runSpacing: Insets.m,
+              spacing: Insets.m,
+              children: [
+                ..._options.map((option) {
+                  if (option == 'More') return widget.more ?? Container();
+                  return _BuildOption(
+                      option: option,
+                      isSelected: _selected == option,
+                      callback: () {
+                        AppHelper.unFocus();
+                        _select(option);
+                      });
+                }),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -65,9 +88,12 @@ class _EvMultiSelectState extends State<EvMultiSelect> {
 }
 
 class _BuildOption extends StatelessWidget {
-  const _BuildOption(
-      {this.callback, this.isSelected = false, required this.option, Key? key})
-      : super(key: key);
+  const _BuildOption({
+    this.callback,
+    this.isSelected = false,
+    required this.option,
+    Key? key,
+  }) : super(key: key);
   final String option;
   final bool isSelected;
   final VoidCallback? callback;
@@ -77,20 +103,14 @@ class _BuildOption extends StatelessWidget {
     AppTheme theme = context.watch();
     return EvContainer(
       color: isSelected ? theme.primary : Colors.transparent,
-      width: context.widthPct(.43),
       borderRadius: Corners.s5Border,
-      border: Border.all(
-        color: isSelected ? theme.primary : theme.grey,
-        width: 1,
-      ),
+      border: Border.all(color: isSelected ? theme.primary : theme.grey),
       child: Padding(
-        padding: const EdgeInsets.all(18),
-        child: Center(
-          child: Text(
-            option,
-            style: TextStyles.body1
-                .textColor(isSelected ? theme.background : theme.txt),
-          ),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+        child: Text(
+          option,
+          style: TextStyles.body1
+              .textColor(isSelected ? theme.background : theme.txt),
         ),
       ),
     ).clickable(callback);

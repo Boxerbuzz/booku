@@ -36,11 +36,11 @@ class AppTheme {
     switch (t) {
       case ThemeType.light:
         return AppTheme(false)
-          ..background = const Color(0xFFF8F8FF)
+          ..background = Colors.white
           ..bg2 = const Color(0xffFFFBFA)
-          ..surface = Colors.white
-          ..primary = const Color(0xff5669FF)
-          ..primaryVariant = const Color(0xff4A43EC)
+          ..surface = const Color(0xFFF8F8FF)
+          ..primary = const Color(0xff0EBE7F)
+          ..primaryVariant = const Color(0xff0EBE7F)
           ..secondary = const Color(0xff29D697)
           ..secondaryVariant = const Color(0xffFF8D5D)
           ..accent = const Color(0xff00F8FF)
@@ -49,22 +49,21 @@ class AppTheme {
           ..greyStrong = const Color(0xff515d5a)
           ..error = const Color(0xffEE544A)
           ..focus = const Color(0xFF7D67EE);
-
-      case ThemeType.dark:
-        return AppTheme(true)
-          ..background = const Color(0xff121212)
-          ..bg2 = const Color(0xff2c2c2c)
-          ..surface = const Color(0xff252525)
-          ..primary = const Color(0xff00a086)
-          ..primaryVariant = const Color(0xff00caa5)
-          ..secondary = const Color(0xff00caa5)
-          ..secondaryVariant = const Color(0xfff19e46)
-          ..accent = const Color(0xff5BC91A)
-          ..accentVariant = const Color(0xffa8b3b0)
-          ..grey = const Color(0xffced4d3)
-          ..greyStrong = const Color(0xffffffff)
-          ..error = const Color(0xffe55642)
-          ..focus = const Color(0xff0ee2b1);
+      // case ThemeType.dark:
+      //   return AppTheme(true)
+      //     ..background = const Color(0xff121212)
+      //     ..bg2 = const Color(0xff2c2c2c)
+      //     ..surface = const Color(0xff252525)
+      //     ..primary = const Color(0xff00a086)
+      //     ..primaryVariant = const Color(0xff00caa5)
+      //     ..secondary = const Color(0xff00caa5)
+      //     ..secondaryVariant = const Color(0xfff19e46)
+      //     ..accent = const Color(0xff5BC91A)
+      //     ..accentVariant = const Color(0xffa8b3b0)
+      //     ..grey = const Color(0xffced4d3)
+      //     ..greyStrong = const Color(0xffffffff)
+      //     ..error = const Color(0xffe55642)
+      //     ..focus = const Color(0xff0ee2b1);
       default:
         return AppTheme.fromType(defaultTheme);
     }

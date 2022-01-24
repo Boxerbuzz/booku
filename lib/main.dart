@@ -27,7 +27,7 @@ class _BookuState extends State<Booku> {
     return Provider.value(
       value: theme,
       child: MaterialApp(
-        title: 'Evento',
+        title: 'Booku',
         theme: theme.themeData,
         navigatorKey: R.G.navKey,
         debugShowCheckedModeBanner: false,

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class EvTextField extends StatefulWidget {
   const EvTextField({
     required this.label,
-    required this.iKey,
     this.msg = const {},
     Key? key,
     this.obscureText = false,
@@ -16,7 +15,6 @@ class EvTextField extends StatefulWidget {
     this.action,
     this.control,
   }) : super(key: key);
-  final String iKey;
   final String label;
   final Map<String, String> msg;
   final bool? obscureText;
@@ -39,12 +37,7 @@ class _EvTextFieldState extends State<EvTextField> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ReactiveTextField<String>(
-          formControlName: widget.iKey,
-          validationMessages: (control) => {
-            ValidationMessage.required:
-                'The ${widget.label} field must not be empty'
-          }..addAll(widget.msg),
+        TextField(
           textInputAction: widget.action ?? TextInputAction.next,
           decoration: InputDecoration(
             prefixIcon: widget.prefixIcon == null
@@ -72,7 +65,8 @@ class _EvTextFieldState extends State<EvTextField> {
           enableInteractiveSelection: true,
           cursorRadius: Corners.s5Radius,
           keyboardType: _setKeyboardType(),
-          formControl: widget.control,
+          enableIMEPersonalizedLearning: true,
+          enableSuggestions: true,
         ),
         VSpace(Insets.l),
       ],
@@ -105,6 +99,6 @@ class _EvTextFieldState extends State<EvTextField> {
 }
 
 OutlineInputBorder _br(Color color) => OutlineInputBorder(
-      borderRadius: Corners.s5Border,
+      borderRadius: Corners.s10Border,
       borderSide: BorderSide(color: color),
     );

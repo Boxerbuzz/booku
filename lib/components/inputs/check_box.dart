@@ -50,7 +50,7 @@ class EvCheckbox extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         color: value == false ? Colors.transparent : theme.primary,
-        borderRadius: Corners.s3Border,
+        borderRadius: Corners.s8Border,
         border: Border.all(
           color: value == false ? theme.grey : theme.primary,
           width: 1.5,

@@ -31,17 +31,18 @@ class _SearchFieldState extends State<EvSearchField> {
       decoration: InputDecoration(
         filled: true,
         isDense: true,
-        fillColor: ColorHelper.shiftHsl(theme.surface, .2),
+        fillColor: ColorHelper.shiftHsl(theme.surface),
         hintText: widget.hint ?? "Search...",
         hintStyle: TextStyles.body1.copyWith(color: theme.txt),
         enabledBorder: OutlineInputBorder(
-          borderRadius: Corners.s5Border,
+          borderRadius: Corners.s10Border,
           borderSide: const BorderSide(color: Colors.white, width: 0.5),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: Corners.s5Border,
+          borderRadius: Corners.s10Border,
           borderSide: const BorderSide(color: Colors.white, width: 0.5),
         ),
+        prefixIcon: widget.suffix,
       ),
     );
   }

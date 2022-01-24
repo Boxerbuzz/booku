@@ -44,6 +44,6 @@ class EvContainer extends StatelessWidget {
         boxShadow: shadows,
         border: border,
       ),
-    ).animate(duration ?? Durations.medium, Curves.bounceInOut);
+    ).animate(duration ?? Durations.fast, Curves.bounceInOut);
   }
 }
