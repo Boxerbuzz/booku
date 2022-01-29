@@ -159,7 +159,7 @@ class EvPriBtn extends StatelessWidget {
       bgColor: theme.primaryVariant,
       hoverColor: theme.isDark ? theme.accentVariant : theme.accentVariant,
       downColor: theme.primary,
-      borderRadius: Corners.s5,
+      borderRadius: Corners.s10,
       child: child,
       onPressed: onPressed,
     );

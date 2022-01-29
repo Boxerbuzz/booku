@@ -1,6 +1,6 @@
 import 'package:booku/exports.dart';
 
-class MocksConst {
+class Mocks {
   static List<String> get genres => [
         R.S.science,
         R.S.autobiography,
@@ -13,6 +13,227 @@ class MocksConst {
         R.S.fairyTale,
         R.S.memoir,
         R.S.action,
-        R.S.drama,
+        R.S.drama
+      ];
+
+  static List<Map<String, dynamic>> get clubs => [
+        {
+          "id": "1",
+          "name": "Book & Tea",
+          "desc": "",
+          "img": "3",
+          "location": "San Fransisco, CA",
+          "categories": [
+            'Romance',
+            'Sci-fi',
+            'Horror',
+            'Fairy Tales',
+            'Action'
+          ],
+          "members": "40",
+          "admins": [],
+          "locked": true,
+        },
+        {
+          "id": "2",
+          "name": "Cosmos World",
+          "desc": "",
+          "img": "1",
+          "location": "Malmö, Sweden",
+          "categories": ['Crime', 'Comedy', 'Adventure', 'Thriller', 'Science'],
+          "members": "89",
+          "admins": [],
+          "locked": false,
+        },
+        {
+          "id": "3",
+          "name": "The Martian",
+          "desc": "",
+          "img": "2",
+          "location": "Málaga, Spain",
+          "categories": [
+            'Memoir',
+            'Autobiography',
+            'Romance',
+            'Drama',
+            'Satire',
+            'Creative Nonfiction'
+          ],
+          "members": "57",
+          "admins": [],
+          "locked": true,
+        },
+        {
+          "id": "4",
+          "name": "Biophile Wanderers",
+          "desc": "",
+          "img": "4",
+          "location": "Lagos, Nigeria",
+          "categories": [
+            'Horror',
+            'Drama',
+            'Thriller',
+            'Adventure',
+            'Comedy',
+            'Mythology',
+            'Fable',
+            'Legend',
+            'Folklore'
+          ],
+          "members": "60",
+          "admins": [],
+          "locked": true,
+        },
+        {
+          "id": "5",
+          "name": "Book Hoarders",
+          "desc": "",
+          "img": "5",
+          "location": "Austin Texas, United State",
+          "categories": [
+            'Science',
+            'Horror',
+            'Romance',
+            'History',
+            'Contemporary Romance',
+            'Western Fiction'
+          ],
+          "members": "30",
+          "admins": [],
+          "locked": true,
+        },
+        {
+          "id": "6",
+          "name": "Designer's Bronx",
+          "desc": "",
+          "img": "6",
+          "location": "Santa Cruz, CA",
+          "categories": ['History', 'Design', 'Product Design', 'Psychology'],
+          "members": "43",
+          "admins": [],
+          "locked": false,
+        },
+        {
+          "id": "7",
+          "name": "Mind with a book",
+          "desc": "",
+          "img": "7",
+          "location": "New Jersey, United State",
+          "categories": [
+            'Fiction',
+            'Narrative',
+            'Mystery',
+            'Literary Fiction',
+            'Magical Realism'
+          ],
+          "members": "98",
+          "admins": [],
+          "locked": false,
+        },
+        {
+          "id": "8",
+          "name": "The Book Sisters",
+          "desc": "",
+          "img": "8",
+          "location": "Watford, United Kingdom",
+          "categories": [
+            'Horror Fiction',
+            'Fantasy',
+            'Short Story',
+            'Humor',
+            'Narrative',
+            'Historical Fiction',
+            'Thriller'
+          ],
+          "members": "100",
+          "admins": [],
+          "locked": true,
+        },
+        {
+          "id": "9",
+          "name": "Book Wormer's",
+          "desc": "",
+          "img": "9",
+          "location": "Abuja, Nigeria",
+          "categories": [
+            'Action Fiction',
+            'Graphic Novel',
+            'Detective Novel',
+            'True Crime'
+          ],
+          "members": "20",
+          "admins": [],
+          "locked": true,
+        },
+      ];
+
+  static List<Map<String, dynamic>> get rec => [
+        {
+          "id": "1",
+          "name": "Book & Tea",
+          "desc": "",
+          "img": "3",
+          "location": "San Fransisco, CA",
+          "categories": [
+            'Romance',
+            'Sci-fi',
+            'Horror',
+            'Fairy Tales',
+            'Action'
+          ],
+          "members": "40",
+          "admins": [],
+          "locked": false,
+        },
+        {
+          "id": "2",
+          "name": "Cosmos World",
+          "desc": "",
+          "img": "1",
+          "location": "Malmö, Sweden",
+          "categories": ['Crime', 'Comedy', 'Adventure', 'Thriller', 'Science'],
+          "members": "89",
+          "admins": [],
+          "locked": false,
+        },
+        {
+          "id": "3",
+          "name": "The Martian's",
+          "desc": "",
+          "img": "2",
+          "location": "Málaga, Spain",
+          "categories": [
+            'Memoir',
+            'Drama',
+            'Romance',
+            'Satire',
+            'Autobiography',
+            'Creative Nonfiction'
+          ],
+          "members": "57",
+          "admins": [],
+          "locked": false,
+        },
+        {
+          "id": "4",
+          "name": "Biophile Wanderers",
+          "desc": "",
+          "img": "4",
+          "location": "Lagos, Nigeria",
+          "categories": [
+            'Horror',
+            'Drama',
+            'Thriller',
+            'Adventure',
+            'Comedy',
+            'Mythology',
+            'Fable',
+            'Legend',
+            'Folklore'
+          ],
+          "members": "60",
+          "admins": [],
+          "locked": false,
+        },
       ];
 }

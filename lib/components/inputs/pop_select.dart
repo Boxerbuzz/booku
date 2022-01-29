@@ -136,9 +136,24 @@ class _ContainerMode extends StatelessWidget {
             : Column(
                 children: [
                   VSpace.lg,
-                  EvSvgIc(R.I.clipboard.svgB, size: 80, color: theme.primary),
+                  EvContainer(
+                    height: 60,
+                    width: 60,
+                    color: theme.primary.withOpacity(.1),
+                    borderRadius: BorderRadius.circular(120),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: EvSvgIc(
+                        R.I.clipboard.svgT,
+                        color: theme.primary,
+                      ),
+                    ),
+                  ),
                   VSpace.md,
-                  Text(label, style: TextStyles.body1),
+                  Text(
+                    label,
+                    style: TextStyles.body2.textColor(theme.greyStrong),
+                  ),
                   VSpace.md,
                   EvSvgIc(R.I.chevronDown.svgB)
                 ],

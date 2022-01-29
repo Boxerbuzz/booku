@@ -23,6 +23,7 @@ class LoginScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 VSpace(context.heightPct(.08)),
+
                 Row(
                   children: [
                     Expanded(
@@ -39,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                         onPressed: () {},
-                        bgColor: theme.surface,
+                        bgColor: theme.error.withOpacity(.2),
                         padding: EdgeInsets.all(Insets.m),
                       ),
                     ),
@@ -58,13 +59,24 @@ class LoginScreen extends StatelessWidget {
                           ],
                         ),
                         onPressed: () {},
-                        bgColor: theme.surface,
+                        bgColor: Colors.blue.withOpacity(.2),
                         padding: EdgeInsets.all(Insets.m),
                       ),
                     ),
                   ],
                 ),
-                VSpace(context.heightPct(.05)),
+
+                VSpace.lg,
+                Row(
+                  children: [
+                    Expanded(child: Divider(color: theme.grey)),
+                    HSpace.md,
+                    Text('OR', style: TextStyles.body1),
+                    HSpace.md,
+                    Expanded(child: Divider(color: theme.grey)),
+                  ],
+                ),
+                VSpace.lg,
                 EvTextField(
                   label: R.S.email,
                   type: InputType.email,

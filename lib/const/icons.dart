@@ -25,6 +25,7 @@ class MyIcons {
   String get clock => 'clock';
   String get closeSquare => 'close-square';
   String get code => 'code-circle';
+  String get crown => 'crown';
   String get cup => 'cup';
   String get directNotification => 'direct-notification';
   String get directRight => 'direct-right';
@@ -60,6 +61,7 @@ class MyIcons {
   String get music => 'music';
   String get moreSquare => 'more-square';
   String get notification => 'notification';
+  String get notificationBing => 'notification-bing';
   String get paint => 'paint';
   String get people => 'people';
   String get phone => 'phone';
@@ -80,6 +82,7 @@ class MyIcons {
   String get ticketStar => 'ticket-star';
   String get trash => 'trash';
   String get user => 'user';
+  String get unlock => 'unlock';
   String get verify => 'verify';
   String get warning => 'warning';
   String get woman => 'woman';

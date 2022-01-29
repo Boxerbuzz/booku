@@ -38,10 +38,10 @@ class EvBottomNav extends StatelessWidget {
                   : EvSvgIc(R.I.people.svgT, color: theme.greyStrong),
             ),
             BottomNavigationBarItem(
-              label: 'Search',
+              label: 'Achievements',
               icon: store.currentPage == 3
-                  ? EvSvgIc(R.I.search.svgB, color: theme.primary)
-                  : EvSvgIc(R.I.search.svgT, color: theme.greyStrong),
+                  ? EvSvgIc(R.I.award.svgB, color: theme.primary)
+                  : EvSvgIc(R.I.award.svgT, color: theme.greyStrong),
             ),
             BottomNavigationBarItem(
               label: 'Me',

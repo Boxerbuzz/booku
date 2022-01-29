@@ -5,3 +5,4 @@ export 'app.dart';
 export 'string.dart';
 export 'date.dart';
 export 'validator.dart';
+export 'image.dart';

@@ -10,23 +10,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: const EvBottomNav(),
-      body: Column(
-        children: [
-          _HomeAppBar(),
-          const Expanded(child: DashboardScreen()),
-        ],
-      ),
+      body: Consumer<AppProvider>(builder: (context, store, child) {
+        return IndexedStack(children: _screens(), index: store.currentPage);
+      }),
     );
   }
 }
 
-class _HomeAppBar extends StatelessWidget {
-  const _HomeAppBar({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: ,
-    );
-  }
+List<Widget> _screens() {
+  return [
+    const DashboardScreen(),
+    const LibraryScreen(),
+    const ClubScreen(),
+    const AchievementScreen(),
+    const ProfileScreen()
+  ];
 }

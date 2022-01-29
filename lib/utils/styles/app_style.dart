@@ -86,7 +86,7 @@ class Sizes {
 }
 
 class TextStyles {
-  static TextStyle quicksand = GoogleFonts.workSans();
+  static TextStyle quicksand = GoogleFonts.montserrat();
 
   static TextStyle get t1 => quicksand.regular.size(FontSizes.s16);
 

@@ -33,7 +33,7 @@ class _SearchFieldState extends State<EvSearchField> {
         isDense: true,
         fillColor: ColorHelper.shiftHsl(theme.surface),
         hintText: widget.hint ?? "Search...",
-        hintStyle: TextStyles.body1.copyWith(color: theme.txt),
+        hintStyle: TextStyles.body1.textColor(theme.txt),
         enabledBorder: OutlineInputBorder(
           borderRadius: Corners.s10Border,
           borderSide: const BorderSide(color: Colors.white, width: 0.5),

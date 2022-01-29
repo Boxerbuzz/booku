@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'exports.dart';
 
 void main() async {
@@ -37,7 +38,13 @@ class _BookuState extends State<Booku> {
             textScaleFactor: context.widthPx <= 800 ? 0.8 : 1.9,
           ),
         ),
-        home: const LoginScreen(),
+        home: AnnotatedRegion(
+          value: SystemUiOverlayStyle(
+            statusBarColor: theme.surface,
+            statusBarIconBrightness: Brightness.dark,
+          ),
+          child: const LoginScreen(),
+        ),
       ),
     );
   }

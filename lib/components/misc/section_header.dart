@@ -3,11 +3,16 @@ import 'package:flutter/material.dart';
 
 class EvSectionHeader extends StatelessWidget {
   const EvSectionHeader(
-      {required this.title, this.more = false, this.click, Key? key})
+      {required this.title,
+      this.more = false,
+      this.click,
+      this.pad = false,
+      Key? key})
       : super(key: key);
   final String title;
   final bool more;
   final Function()? click;
+  final bool pad;
 
   @override
   Widget build(BuildContext context) {
@@ -18,21 +23,25 @@ class EvSectionHeader extends StatelessWidget {
           children: [
             Text(title, style: TextStyles.h6.semiBold),
             Expanded(child: Container()),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'More..',
-                  style: TextStyles.button.textColor(theme.primary),
-                ),
-                HSpace.sm,
-                EvSvgIc(R.I.arrowRight.svgT, size: 15),
-              ],
-            ).rippleClick(() => click),
+            EvIcBtn(
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'More',
+                    style: TextStyles.button.textColor(theme.primary),
+                  ),
+                  HSpace.sm,
+                  EvSvgIc(R.I.arrowRight.svgT, size: 15, color: theme.primary),
+                ],
+              ),
+              shrinkWrap: true,
+              onPressed: () {},
+            ),
           ],
         ),
-        VSpace.lg
+        VSpace.md,
       ],
-    );
+    ).padding(horizontal: Insets.l, vertical: pad == true ? Insets.l : 0);
   }
 }
